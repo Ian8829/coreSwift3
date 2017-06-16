@@ -39,3 +39,7 @@ if findResult != nil {
   print("찾으시는 책이 없네요.")
 }
 
+myBook.removeBook("죄")
+
+print(myBook.showAllBook())
+

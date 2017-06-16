@@ -14,8 +14,8 @@ class BookManager {
         for bookTemp in bookList{
             strTemp += "Name : \(bookTemp.name)\n"
             strTemp += "Genre : \(bookTemp.genre)\n"
-            strTemp += "Author : \(bookTemp.author)\n"
-            strTemp += "------------------------------"
+            strTemp += "Author : \(bookTemp.author)"
+            strTemp += "------------------------------\n"
         }
         return strTemp
     }
@@ -25,20 +25,25 @@ class BookManager {
     }
     
     func findBook(_ name:String) -> String? {
-      var strTemp2 = ""
+      var strTemp = ""
 
-      for bookTemp2 in bookList {
-          if bookTemp2.name == name {
-            strTemp2 += "Name : \(bookTemp2.name)\n"
-            strTemp2 += "Genre : \(bookTemp2.genre)\n"
-            strTemp2 += "Author : \(bookTemp2.author)\n"
-            return strTemp2
+      for bookTemp in bookList {
+          if bookTemp.name == name {
+            strTemp += "Name : \(bookTemp.name)\n"
+            strTemp += "Genre : \(bookTemp.genre)\n"
+            strTemp += "Author : \(bookTemp.author)\n"
+            return strTemp
           }
       }
       return nil
     }
     
-    func removeBook() {
-        
+    func removeBook(_ name: String) {
+        for bookTemp in bookList {
+          if bookTemp.name == name {
+            let index = (bookList as NSArray).index(of: bookTemp)
+            bookList.remove(at: index)
+          }
+        }
     }
 }
