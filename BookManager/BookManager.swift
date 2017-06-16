@@ -24,8 +24,18 @@ class BookManager {
       return bookList.count
     }
     
-    func findBook() {
-        
+    func findBook(_ name:String) -> String? {
+      var strTemp2 = ""
+
+      for bookTemp2 in bookList {
+          if bookTemp2.name == name {
+            strTemp2 += "Name : \(bookTemp2.name)\n"
+            strTemp2 += "Genre : \(bookTemp2.genre)\n"
+            strTemp2 += "Author : \(bookTemp2.author)\n"
+            return strTemp2
+          }
+      }
+      return nil
     }
     
     func removeBook() {

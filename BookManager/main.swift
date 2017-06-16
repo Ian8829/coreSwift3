@@ -28,5 +28,14 @@ myBook.addBook(book2)
 myBook.addBook(book3)
 
 print(myBook.showAllBook())
+
 print(myBook.countBook())
+
+var findResult = myBook.findBook("햄릿")
+
+if findResult != nil {
+  print("\(findResult!) 를 찾았습니다")
+} else {
+  print("찾으시는 책이 없네요.")
+}
 
