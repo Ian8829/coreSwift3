@@ -23,8 +23,10 @@ book3.author = "톨스토이"
 
 var myBook = BookManager()
 
-myBook.addBook(bookObject: book1)
-myBook.addBook(bookObject: book2)
-myBook.addBook(bookObject: book3)
+myBook.addBook(book1)
+myBook.addBook(book2)
+myBook.addBook(book3)
 
+print(myBook.showAllBook())
+print(myBook.countBook())
 
