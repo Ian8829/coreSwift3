@@ -50,10 +50,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="outputTextView" destination="P6v-ss-UnB" id="kAv-ux-YdC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18" y="110"/>
+            <point key="canvasLocation" x="-72" y="-58"/>
         </scene>
     </scenes>
 </document>

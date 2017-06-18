@@ -14,7 +14,7 @@ class BookManager {
         for bookTemp in bookList{
             strTemp += "Name : \(bookTemp.name)\n"
             strTemp += "Genre : \(bookTemp.genre)\n"
-            strTemp += "Author : \(bookTemp.author)"
+            strTemp += "Author : \(bookTemp.author)\n"
             strTemp += "------------------------------\n"
         }
         return strTemp
