@@ -21,6 +21,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgD-BS-sZN">
+                                <rect key="frame" x="77" y="208" width="264" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.91923777633667103" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="전체 보기">
+                                    <color key="titleColor" red="1" green="0.13152854953614201" blue="0.76224592730512764" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAllBookAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7tT-B6-wAE"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="P6v-ss-UnB">
                                 <rect key="frame" x="36" y="253" width="343" height="389"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -78,27 +90,36 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iu-Y1-QHl">
-                                <rect key="frame" x="30" y="163" width="44" height="30"/>
+                                <rect key="frame" x="77" y="167" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.64770116496030949" blue="0.032562692323018338" alpha="0.279296875" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="등록">
                                     <color key="titleColor" red="1" green="0.13152854950000001" blue="0.76224592729999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" red="1" green="0.64770116496030949" blue="0.032562692323018338" alpha="0.279296875" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
-                                <connections>
-                                    <action selector="addBookAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4zk-VU-G7a"/>
-                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgD-BS-sZN">
-                                <rect key="frame" x="77" y="201" width="264" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5b-tN-aCy">
+                                <rect key="frame" x="185" y="167" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.91923777633667103" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="전체 보기">
-                                    <color key="titleColor" red="1" green="0.13152854953614201" blue="0.76224592730512764" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.539689765770756" green="1" blue="0.10253852380274908" alpha="0.279296875" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="검색">
+                                    <color key="titleColor" red="0.17139668367346939" green="0.3359375" blue="0.0068558673469387831" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" red="1" green="0.64770116499999997" blue="0.032562692320000003" alpha="0.279296875" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="showAllBookAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7tT-B6-wAE"/>
+                                    <action selector="findBookAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9hf-lp-aU0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYC-wx-l3e">
+                                <rect key="frame" x="297" y="167" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.12696397272752613" green="1" blue="0.96424134430408159" alpha="0.279296875" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="삭제">
+                                    <color key="titleColor" red="0.083684289888718844" green="0.17942562545679655" blue="0.40175680051813467" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" red="1" green="0.64770116499999997" blue="0.032562692320000003" alpha="0.279296875" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeBookAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T4U-DR-NCO"/>
                                 </connections>
                             </button>
                         </subviews>

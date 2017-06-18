@@ -56,6 +56,24 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func findBookAction(_ sender:AnyObject) {
+        let resultBook = myBook.findBook(nameTextField.text!)
+        if resultBook != nil {
+            outputTextView.text = resultBook
+        } else {
+            outputTextView.text = "찾으시는 책이 없습니다."
+        }
+    }
+    
+    @IBAction func removeBookAction(_ sender:AnyObject) {
+        let deleteBook = myBook.removeBook(nameTextField.text!)
+        if deleteBook == true {
+            outputTextView.text = "\(nameTextField.text!) 도서가 삭제되었습니다.."
+        } else {
+            outputTextView.text = "지우려는 책이 없습니다."
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
