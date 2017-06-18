@@ -9,6 +9,8 @@ class ViewController: UIViewController {
     @IBOutlet var genreTextField:UITextField!
     @IBOutlet var authorTextField:UITextField!
     
+    @IBOutlet var countLabel:UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -37,6 +39,8 @@ class ViewController: UIViewController {
         myBook.addBook(book1)
         myBook.addBook(book2)
         myBook.addBook(book3)
+        
+        countLabel.text = "\(myBook.countBook())"
     }
     
     @IBAction func showAllBookAction(_ sender:AnyObject) {
@@ -53,6 +57,7 @@ class ViewController: UIViewController {
         
         myBook.addBook(bookTemp)
         outputTextView.text = "\(nameTextField.text!) 도서가 등록되었습니다."
+        countLabel.text = "\(myBook.countBook())"
         
     }
     
@@ -69,6 +74,7 @@ class ViewController: UIViewController {
         let deleteBook = myBook.removeBook(nameTextField.text!)
         if deleteBook == true {
             outputTextView.text = "\(nameTextField.text!) 도서가 삭제되었습니다.."
+            countLabel.text = "\(myBook.countBook())"
         } else {
             outputTextView.text = "지우려는 책이 없습니다."
         }
