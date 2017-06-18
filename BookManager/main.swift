@@ -15,7 +15,7 @@ book2.author = "해밍웨이"
 //book2.bookPrint()
 
 var book3 = Book()
-book3.name = "죄"
+book3.name = "죄와벌"
 book3.genre = "사실주의"
 book3.author = "톨스토이"
 
