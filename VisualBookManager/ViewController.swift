@@ -41,6 +41,9 @@ class ViewController: UIViewController {
         myBook.addBook(book2)
         myBook.addBook(book3)
     }
+    @IBAction func showAllBookAction(_ sender:AnyObject) {
+        print("showAllBookAction Clicked?")
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
