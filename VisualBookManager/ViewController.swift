@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  VisualBookManager
-//
-//  Created by Ian on 18/06/2017.
-//  Copyright © 2017 ianHome. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -45,6 +37,11 @@ class ViewController: UIViewController {
     @IBAction func showAllBookAction(_ sender:AnyObject) {
 //        print(myBook.showAllBook())
         outputTextView.text = myBook.showAllBook()
+    }
+    
+    @IBAction func addBookAction(_ sender:AnyObject) {
+        let bookTemp = Book()
+        
     }
     
     override func didReceiveMemoryWarning() {
