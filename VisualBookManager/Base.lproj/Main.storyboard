@@ -129,6 +129,7 @@
                                 <rect key="frame" x="224" y="63" width="76" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.84107885152135775" green="1" blue="0.19590933463806826" alpha="0.29555457746478875" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.170132859855924" green="0.44397668393782386" blue="0.0060107983253963543" alpha="0.29555457746478875" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.1713966837" green="0.3359375" blue="0.0068558673469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
