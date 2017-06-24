@@ -49,6 +49,7 @@
                     </view>
                     <connections>
                         <outlet property="imgView" destination="k2s-qN-nwN" id="VVd-r5-Gdb"/>
+                        <outlet property="toggleButton" destination="O0p-eH-naT" id="Tpj-WL-BIR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
