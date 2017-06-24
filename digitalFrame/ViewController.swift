@@ -11,7 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var imgView:UIImageView!
     @IBOutlet var toggleButton:UIButton!
-
+    @IBOutlet var speedSlider:UISlider!
+    @IBOutlet var speedLabel:UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let cuteImages = [
@@ -32,14 +34,25 @@ class ViewController: UIViewController {
     }
     
     @IBAction func toggleAction(_ sender: AnyObject) {
+//        let hexColor = UIColor(hex: "#175104")
+        
         if imgView.isAnimating {
             imgView.stopAnimating()
             toggleButton.setTitle("Start", for: UIControlState.normal)
+            toggleButton.setTitleColor(.green, for: .normal)
         } else {
             imgView.startAnimating()
             toggleButton.setTitle("Stop", for: UIControlState.normal)
+            toggleButton.setTitleColor(.red, for: .normal)
         }
         
+    }
+    
+    @IBAction func changeSpeedAction(_ sender: AnyObject) {
+        imgView.animationDuration = Double(speedSlider.value)
+        imgView.startAnimating()
+        toggleButton.setTitle("Stop", for: UIControlState.normal)
+        speedLabel.text = "\(speedSlider.value)"
     }
 
     override func didReceiveMemoryWarning() {
