@@ -27,6 +27,11 @@ class ViewController: UIViewController {
             ]
         
         imgView.animationImages = cuteImages
+        imgView.animationDuration = 15.0
+    }
+    
+    @IBAction func toggleAction(_ sender: AnyObject) {
+        imgView.startAnimating()
     }
 
     override func didReceiveMemoryWarning() {
